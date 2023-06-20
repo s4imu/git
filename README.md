@@ -11,7 +11,7 @@
 ~~~bash
 git commit -m "Mensagem do commit"
 ~~~
-
+ 
 **push:** usado para enviar os commits locais para um repositório remoto, atualizando o branch remoto correspondente com as alterações confirmadas. 
 
 ~~~bash
@@ -41,3 +41,60 @@ git merge <branch_de_origem>
 ~~~
 
 <branch_de_origem>: É o nome do branch de onde você deseja mesclar as alterações. Por exemplo, pode ser o nome de um branch remoto ou local, como "feature/branch" ou "origin/branch".
+
+**clone:** usado para criar uma cópia local de um repositório Git remoto. Ele baixa todo o histórico de commits, ramos (branches), tags e outros objetos do repositório remoto para o diretório de trabalho local.
+
+**rm:**  usado para remover arquivos ou diretórios do repositório Git. Ele indica ao Git que você deseja que um determinado arquivo ou diretório seja removido do controle de versão
+
+**log:** sado para exibir o histórico de commits de um repositório Git. Ele mostra informações detalhadas sobre os commits realizados, como o autor, a data, a mensagem de commit e o hash do commit.
+
+**mv:** usado para renomear ou mover arquivos ou diretórios no repositório Git. Ele permite que você renomeie um arquivo ou mova-o para um diretório diferente no repositório Git, mantendo o controle de versão adequado do arquivo. Serve para renomear o arquivo também
+
+~~~bash
+git mv <arquivo_ou_diretório_atual> <novo_arquivo_ou_diretório>
+~~~
+
+**git checkout:** permite várias ações como:
+* Alternar entre branches:
+~~~bash
+git checkout <nome_do_branch>
+~~~
+
+* Criar e alternar para uma nova branch:
+
+~~~bash
+git checkout -b <nome_do_branch>
+~~~
+
+*  verificar um commit específico em vez de um branch. No entanto, seu repositório entrará no chamado modo "detached HEAD", o que significa que você estará verificando um commit específico, mas não estará em um branch. Tenha cuidado ao fazer alterações nesse estado, pois elas podem ser perdidas:
+
+~~~bash
+git checkout <hash_do_commit>
+~~~
+
+* reverter as alterações não confirmadas de um arquivo específico para a versão mais recente no commit anterior.
+
+~~~bash
+git checkout -- <caminho_do_arquivo>
+~~~
+
+* descartar todas as alterações não confirmadas em todos os arquivos no diretório de trabalho, revertendo-os para as versões mais recentes registradas nos commits anteriores.
+
+~~~bash
+git checkout -- 
+~~~
+
+**reset:** sado para desfazer alterações em um repositório Git. Ele permite redefinir o estado do repositório para um commit anterior, descartando commits, desfazendo alterações e movendo o ponteiro HEAD e/ou ramos para um commit específico.
+
+~~~bash
+git reset --hard <commit>
+git reset --hard <branch>
+~~~
+
+**.gitignore:** arquivo utilizado pelo Git para especificar quais arquivos e diretórios devem ser ignorados durante o versionamento de um repositório.
+
+* **arquivo.txt** - Ignorar um arquivo específico
+* ***.log** - Ignorar todos os arquivos com uma determinada extensão
+* **diretorio/** - Ignorar todos os arquivos em um diretório
+* **diretorio/*** - Ignorar arquivos em um diretório específico, mas não em subdiretórios:
+* ****/diretorio/** - Ignorar arquivos em todos os diretórios com um nome específico:
