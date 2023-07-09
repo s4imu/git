@@ -84,6 +84,9 @@ git checkout -- <caminho_do_arquivo>
 git checkout -- 
 ~~~
 
+* sempre commit suas alterações antes de trocar de branches
+* branches para desenvolvimento de novas criações devem ser cópias da Main
+
 **reset:** usado para desfazer alterações em um repositório Git. Ele permite redefinir o estado do repositório para um commit anterior, descartando commits, desfazendo alterações e movendo o ponteiro HEAD e/ou ramos para um commit específico.
 
 ~~~bash
