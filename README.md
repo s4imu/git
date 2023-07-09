@@ -84,6 +84,9 @@ git checkout -- <caminho_do_arquivo>
 git checkout -- 
 ~~~
 
+* sempre commit suas alterações antes de trocar de branches
+* branches para desenvolvimento de novas criações devem ser cópias da Main
+
 **reset:** usado para desfazer alterações em um repositório Git. Ele permite redefinir o estado do repositório para um commit anterior, descartando commits, desfazendo alterações e movendo o ponteiro HEAD e/ou ramos para um commit específico.
 
 ~~~bash
@@ -112,6 +115,14 @@ pode ser útil em várias situações, como quando você está no meio de um tra
 ~~~
 
 Onde "n" é o índice do stash que você deseja aplicar. Por exemplo, "stash@{0}" refere-se ao stash mais recente.
+
+**stash clear:**  usado para limpar completamente a pilha de stashes, removendo todos os stashes armazenados no repositório.
+
+**stash drop:** utilizado para remover um stash específico da pilha de stashes do repositório. 
+
+~~~bash
+    git stash drop stash@{n}
+~~~
 
 **.gitignore:** arquivo utilizado pelo Git para especificar quais arquivos e diretórios devem ser ignorados durante o versionamento de um repositório.
 
