@@ -84,12 +84,19 @@ git checkout -- <caminho_do_arquivo>
 git checkout -- 
 ~~~
 
-**reset:** sado para desfazer alterações em um repositório Git. Ele permite redefinir o estado do repositório para um commit anterior, descartando commits, desfazendo alterações e movendo o ponteiro HEAD e/ou ramos para um commit específico.
+**reset:** usado para desfazer alterações em um repositório Git. Ele permite redefinir o estado do repositório para um commit anterior, descartando commits, desfazendo alterações e movendo o ponteiro HEAD e/ou ramos para um commit específico.
 
 ~~~bash
 git reset --hard <commit>
 git reset --hard <branch>
 ~~~
+
+**branch:** usado para listar, criar e excluir branches (ramos) em um repositório Git.
+
+* **git branch** - Listar branches
+* **git branch <nome_do_novo_branch>:** - Criar novo branch
+* **git branch -d <nome_do_branch>:** - Deletar branch
+
 
 **.gitignore:** arquivo utilizado pelo Git para especificar quais arquivos e diretórios devem ser ignorados durante o versionamento de um repositório.
 
