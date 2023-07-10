@@ -124,6 +124,36 @@ Onde "n" é o índice do stash que você deseja aplicar. Por exemplo, "stash@{0}
     git stash drop stash@{n}
 ~~~
 
+**tag:**  usado para criar, listar e gerenciar tags (marcas) em um repositório. As tags são usadas para marcar pontos específicos na história do seu projeto, geralmente para marcar versões ou lançamentos importantes.
+
+~~~bash
+    git tag -a nome_da_tag -m "Mensagem da tag"
+~~~
+ 
+ Você também pode:
+
+ * Listar Tags:
+ ~~~bash
+    git tag
+ ~~~
+
+* Exibir infos detalhadas 
+
+ * Listar Tags:
+ ~~~bash
+    git show nome_da_tag
+ ~~~
+
+ * Compartilhar tags: Por padrão, as tags não são enviadas automaticamente para um repositório remoto ao executar "git push". Para enviar tags específicas para um repositório remoto, use o comando:
+ ~~~bash
+    git push origin nome_da_tag
+ ~~~
+
+* Deletar tags: Para remover uma tag existente, use o seguinte comando:
+ ~~~bash
+    git tag -d nome_da_tag
+ ~~~
+
 **.gitignore:** arquivo utilizado pelo Git para especificar quais arquivos e diretórios devem ser ignorados durante o versionamento de um repositório.
 
 * **arquivo.txt** - Ignorar um arquivo específico
