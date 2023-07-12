@@ -28,7 +28,7 @@ git pull <nome_remoto> <nome_branch>
 
 <nome_branch>: É o nome do branch (ramo) local que você deseja enviar para o repositório remoto. 
 
-**fetch:** Usado para buscar as alterações mais recentes de um repositório remoto para o repositório local, atualizando as referências remotas locais sem mesclar automaticamente as alterações com o branch local atual. 
+**fetch:** Usado para buscar as alterações mais recentes de um repositório remoto para o repositório local, atualizando as referências remotas locais sem mesclar automaticamente as alterações com o branch local atual. Buscar branches de repositórios locais de outros devs
 
 ~~~bash
 git fetch <nome_remoto> 
@@ -153,6 +153,58 @@ Onde "n" é o índice do stash que você deseja aplicar. Por exemplo, "stash@{0}
  ~~~bash
     git tag -d nome_da_tag
  ~~~
+
+**remote:** usado para interagir com repositórios remotos no Git. Que é uma versão do seu projeto que é hospedada em um servidor ou em outro local na Internet.
+
+*  listar os repositórios remotos atualmente configurados para o seu projeto.
+
+~~~bash
+git remote
+~~~
+
+* adicionar um novo repositório remoto
+
+~~~bash
+git remote add <nome> <URL>
+~~~
+
+* remover um repositório remoto
+
+~~~bash
+git remote remove <nome>
+~~~
+
+* renomear um repositório remoto
+
+~~~bash
+git remote rename <nome-atual> <novo-nome>
+~~~
+
+**submodule:** usado no Git para lidar com submódulos. que é um repositório Git aninhado dentro de um repositório Git principal. permitindo que a inclusão outro repositório Git como uma subpasta dentro do seu próprio repositório. Esses submódulos podem ter seu histórico de commits, ramificações e tags independentes.
+
+* adicionar um submódulo a um repositório
+
+~~~bash
+git submodule add <URL> <caminho>
+~~~
+
+*  Após clonar um repositório que contém submódulos, você precisa inicializá-los usando o comando . Garantindo que o Git esteja ciente dos submódulos presentes no repositório e os configure corretamente.
+
+~~~bash
+git submodule init
+~~~
+
+* Atualizar submódulos
+
+~~~bash
+git submodule update
+~~~
+
+* enviar para o repositório do submódulo
+
+~~~bash
+git push --recuse-submodulo=on-demand
+~~~
 
 **.gitignore:** arquivo utilizado pelo Git para especificar quais arquivos e diretórios devem ser ignorados durante o versionamento de um repositório.
 
