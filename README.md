@@ -206,6 +206,22 @@ git submodule update
 git push --recuse-submodulo=on-demand
 ~~~
 
+**show:**  usado para exibir informações detalhadas sobre um determinado commit no Git. Ele mostra as alterações introduzidas no commit, bem como metadados associados a ele, como autor, data, mensagem de commit e assim por diante.
+
+~~~bash
+git show <hash-do-commit>
+~~~
+
+**diff:** Usado para mostrar as diferenças entre os estados do repositório Git. Ele exibe as alterações feitas em arquivos que ainda não foram confirmadas (staged) e as alterações entre o último commit e o diretório de trabalho atual.
+
+* diferença entre commits/arquivos/braches específicos
+
+~~~bash
+git diff <commit/arquivo/branch-A> <commit/arquivo/branch-B>
+~~~
+
+**shortlog:** usado para gerar um resumo conciso dos logs de commit de um repositório Git. Ele agrupa os commits por autor, exibindo o número de commits feitos por cada autor e as mensagens de commit associadas a esses commits.
+
 **.gitignore:** arquivo utilizado pelo Git para especificar quais arquivos e diretórios devem ser ignorados durante o versionamento de um repositório.
 
 * **arquivo.txt** - Ignorar um arquivo específico
