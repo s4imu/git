@@ -222,6 +222,23 @@ git diff <commit/arquivo/branch-A> <commit/arquivo/branch-B>
 
 **shortlog:** usado para gerar um resumo conciso dos logs de commit de um repositório Git. Ele agrupa os commits por autor, exibindo o número de commits feitos por cada autor e as mensagens de commit associadas a esses commits.
 
+**clean:**  usado para limpar arquivos não rastreados em um repositório Git. Ele remove arquivos e diretórios que não estão sob controle de versão (untracked) no diretório de trabalho
+
+**gc:** sado para realizar a coleta de lixo no repositório Git. A coleta de lixo é um processo que compacta e otimiza o armazenamento de objetos no banco de dados do Git
+
+**fsck:** usado para verificar a integridade dos objetos do banco de dados do Git. Ele realiza uma verificação no banco de dados em busca de possíveis problemas, como objetos corrompidos, referências perdidas ou outros erros de consistência
+
+**reflog:** usado para exibir o log de referências (reflog) no Git. O reflog registra todas as alterações que afetam as referências, como commits, mesclagens, redefinições de cabeça e operações de ramificação.
+
+**archive:** usado para criar um arquivo compactado que contém o conteúdo de uma determinada revisão do Git.
+
+~~~bash
+git archive --format=<formato> --output=<arquivo-saida> <revisao>
+
+git archive --format=zip --output=meu-arquivo.zip HEAD
+
+~~~
+
 **.gitignore:** arquivo utilizado pelo Git para especificar quais arquivos e diretórios devem ser ignorados durante o versionamento de um repositório.
 
 * **arquivo.txt** - Ignorar um arquivo específico
